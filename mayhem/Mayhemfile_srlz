@@ -1,0 +1,8 @@
+project: savantenvs/rapidyaml
+target: srlz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/srlz/testsuite
+cmds:
+  - cmd: /mayhem/srlz
+    libfuzzer: true
