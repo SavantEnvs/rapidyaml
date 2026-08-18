@@ -1,0 +1,9 @@
+project: savantenvs/rapidyaml
+target: json_tree
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/json_tree/testsuite
+cmds:
+  - cmd: /mayhem/json_tree
+    libfuzzer: true
+    dictionary: /mayhem/json_tree.dict
