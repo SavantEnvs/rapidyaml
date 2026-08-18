@@ -1,0 +1,9 @@
+project: savantenvs/rapidyaml
+target: yaml_tree
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/yaml_tree/testsuite
+cmds:
+  - cmd: /mayhem/yaml_tree
+    libfuzzer: true
+    dictionary: /mayhem/yaml_tree.dict

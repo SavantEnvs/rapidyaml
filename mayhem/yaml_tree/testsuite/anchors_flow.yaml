@@ -1,0 +1,23 @@
+defaults: &defaults
+  adapter:  postgres
+  host:     localhost
+
+development:
+  <<: *defaults
+  database: dev_db
+
+flow_seq: [1, 2, 3, {a: 1, b: 2}]
+flow_map: {x: 1, y: [2, 3], z: {nested: true}}
+tagged: !!str 12345
+multiline: |
+  line one
+  line two
+folded: >
+  folded text
+  continues here
+---
+doc2: true
+list:
+  - a
+  - b: c
+    d: e
